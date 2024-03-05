@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EmployeeSys.Models.Employee>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1 class="pb-5 fw-bold text-green">XYZ Corp Employee</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-indigo text-white">Create New</a>
+</p>
+<div class="p-xl-2 secondary-color table-container shadow-sm">
+    <table class="table table-hover table-striped secondary-color table-borderless align-middle justify-content-center text-center">
+        <thead>
+            <tr class="">
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="border-top border-secondary">
+    @foreach (var item in Model) {
+            <tr class="">
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    <a class="btn btn-indigo text-white" asp-action="Edit" asp-route-id="@item.EmployeeId">Edit</a> |
+                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.EmployeeId">Details</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.EmployeeId">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>

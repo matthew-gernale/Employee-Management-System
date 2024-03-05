@@ -1,0 +1,115 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.text-jakarta {
+    font-family: 'Plus Jakarta Sans';
+}
+
+.side-bar {
+    width: 20vw;
+    min-height: 100vh;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+}
+
+.link {
+    transition: .2s;
+}
+
+.link:hover {
+    transform: translateX(10px);
+}
+
+.icon {
+    width: 2vw;
+}
+
+#VideoPlayer {
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.secondary-color {
+    background-color: #fff;
+}
+
+.primary-color {
+    
+    background-color: #fff;
+}
+
+.text-green {
+    color: #344e41;
+}
+
+.accent {
+    border-left: 5px solid #344e41;
+}
+
+.nav-color {
+    background-color: #344e41;
+}
+.btn-indigo {
+    background-color: #4338ca;
+    transition: .2s;
+}
+
+.btn-indigo:hover {
+    background-color: #685fd4;
+}
+
+.table-container {
+    border-radius: 40px;
+}
+
+.table-container table {
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+table .btn {
+    font-size: 12px;
+}
+
+.detail {
+    width: fit-content;
+}
+
+.about-card {
+    border-radius: 40px;
+}
+.social-icon {
+    cursor: pointer;
+    width: 50px;
+    margin: 5px 5px 50px;
+    transition: .2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}

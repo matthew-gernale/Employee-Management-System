@@ -1,0 +1,59 @@
+﻿@model EmployeeSys.Models.Employee
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1 class="text-green fw-bold">Add new Employee</h1>
+
+<h4>Enter Employee Details</h4>
+<hr />
+<div class="d-flex flex-column align-items-center justify-content-center w-100">
+    <div class="shadow-sm d-flex flex-column align-items-center justify-content-center secondary-color w-50 table-container px-5 py-5">
+        <div class="w-100">
+            <form asp-action="Create" class="d-flex flex-column gap-2">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex w-100 align-items-center justify-content-center gap-2 pt-3">
+                        <input type="submit" value="Create" class="btn btn-success px-5 py-2" />
+                    |
+                        <a asp-action="Index" class="btn btn-secondary text-white text-decoration-none px-5 py-2">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

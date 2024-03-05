@@ -1,0 +1,56 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Employee Data</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EmployeeSys.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body class="primary-color">
+    <div class="d-flex">
+        <nav class="side-bar nav-color">
+                
+                <a class="text-decoration-none fw-bold fs-5 text-white text-jakarta" asp-area="" asp-controller="Home" asp-action="Index">Management System</a>
+                <hr class="text-white"/>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="">
+                    <ul class="nav-link list-unstyled">
+                        <li class="mb-4 d-flex align-content-center gap-2">
+                        <img src="~/images/employee-icon.png" class="icon" alt="Employee Icon" />
+                        <a class="link text-decoration-none fs-5 text-white text-jakarta" asp-controller="Employees" asp-action="Index">Employee</a>
+                        </li>
+
+                        <li class="d-flex align-content-center gap-2">
+                        <img src="~/images/about-icon.png" class="icon" alt="About Icon" />
+                        <a class="link text-decoration-none fs-5 text-white text-jakarta" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+
+    <div class="container">
+            <main role="main" class="text-jakarta text-black px-5 py-lg-5">
+            @RenderBody()
+        </main>
+    </div>
+</div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
